@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>スマホサイト向け 無料ホームページテンプレート tp_sh2</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ここにサイト説明を入れます">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div id="container">
+
+<header>
+<h1>サンプル町</h1>
+</header>
+
+<div id="header-nav">
+
+<nav>
+<ul>
+<li><a href="index.html"><span class="icon">🏠</span><span class="label">ホーム</span></a></li>
+<li>
+<a href="search.html"><span class="icon">🔍</span><span class="label">探す</span>
+</a>
+</li>
+<li><a href="map.html"><span class="icon">📍</span><span class="label">周辺地図</span></a></li>
+<li><a href="contact.html"><span class="icon">✉️</span><span class="label">お問合せ</span></a></li>
+</ul>
+</nav>
+
+</div>
+
+<main>
+
+<section>
+
+<h2 class="c">周辺地図</h2>
+<p class="c">観光案内向けになっているので、内容は必要に応じて入れ替えて下さい。</p>
+
+<div class="image-map-container">
+
+<img src="images/map.jpg" alt="" class="base-image">
+
+<a href="#" class="pin-item" style="top: 10%; left: 25%;">
+<span class="pin-marker">📍</span>
+<span class="pin-label">お城</span>
+</a>
+
+<a href="#" class="pin-item" style="top: 15%; left: 80%;">
+<span class="pin-marker">🛝</span>
+<span class="pin-label">公園</span>
+</a>
+
+<a href="#" class="pin-item" style="top: 40%; left: 40%;">
+<span class="pin-marker">🛍️</span>
+<span class="pin-label">ショッピング</span>
+</a>
+
+<a href="#" class="pin-item" style="top: 85%; left: 85%;">
+<span class="pin-marker">🎡</span>
+<span class="pin-label">遊園地</span>
+</a>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>マップの使い方</h2>
+
+<p>マップもピンも全てhtml側に直接入っています。<br>
+ピンの場所もhtmlです。styleという後の数値になります。</p>
+<p>ここのピンアイコンもメニュー同様、通常の「絵文字」です。閲覧環境によってデザインが変わります。</p>
+
+</section>
+
+</main>
+
+<footer>
+<small>Copyright© あなたのサイト名 All Rights Reserved.</small>
+</footer>
+
+<!--以下の行はテンプレートの著作。削除しないで下さい。-->
+<span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+
+</div>
+<!--/#container-->
+
+<!--ページの上部へ戻るボタン-->
+<div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
+
+<!--開閉メニュー-->
+<div id="menubar">
+
+<p>ここのメニューはhtmlの下の方にあるmenubarのブロックです。ヘッダー下のメニューでは足りない場合に使って下さい。<br>
+不要であれば、ここのmenubarブロックと、すぐ下にあるmenubar_hdrブロックを削除すればOK。</p>
+
+<nav>
+<ul>
+<li><a href="index.html"><span class="icon">🏠</span><span class="label">ホーム</span></a></li>
+<li>
+<a href="search.html"><span class="icon">🔍</span><span class="label">探す</span>
+</a>
+</li>
+<li><a href="map.html"><span class="icon">📍</span><span class="label">周辺地図</span></a></li>
+<li><a href="contact.html"><span class="icon">✉️</span><span class="label">お問合せ</span></a></li>
+<li><a href="company.html"><span class="icon">🏢</span><span class="label">運営</span></a></li>
+</ul>
+</nav>
+
+</div>
+<!--/#menubar-->
+
+<!--開閉ボタン（ハンバーガーアイコン）-->
+<div id="menubar_hdr">
+<span></span><span></span><span></span>
+</div>
+
+<!--jQueryの読み込み-->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!--このテンプレート専用のスクリプト-->
+<script src="js/main.js"></script>
+
+</body>
+</html>
