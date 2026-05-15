@@ -4,6 +4,18 @@
 <head>
  <meta charset="UTF-8" />
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ツイッターカードの設定 -->
+ <meta name="twitter:card" content="img/Amormeus_logo.PNG" />
+ <!--Twitterカードの種類-->
+ <meta name="twitter:site" content="Summary Card" />
+ <!--Twitterユーザー名-->
+ <meta property="og:title" content="Amor meus"><!-- ページのタイトル -->
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="https://kyomou559.github.io/Amor-meus"><!-- ページのURL -->
+ <meta property="og:image" content="img/Amormeus_logo.PNG"><!-- 画像のURL -->
+ <meta property="og:description" content="HoYoverse作品の非公式夢小説Webアンソロジー">
+ <!--記事の要約（ディスクリプション）-->
+
  <title>Amor meus</title>
  <link href="css/reset.css" rel="stylesheet">
  <link href="css/common.css" rel="stylesheet" type="text/css">
@@ -24,7 +36,7 @@
     <ul class="globalnav__main">
      <li class="globalnav__item"><a href="index.html">Top</a></li>
      <li class="globalnav__item"><a href="#novel">Novel</a></li>
-     <li class="globalnav__item"><a href="#writer">Writer</a></li>
+     <li class="globalnav__item"><a href="writer.html">Writer</a></li>
     </ul>
    </nav><!-- メニューここまで -->
  </header>
@@ -51,9 +63,9 @@
   <section id="information">
    <h2 class="headingL">Name change</h2>
    <label for="name">苗字:</label>
-   <input type="text" id="charmname1" class="charm"><br>
+   <input type="text" id="charmname1" class="charm charmnow"><br>
    <label for="name">名前:</label>
-   <input type="text" id="charmname2" class="charm">
+   <input type="text" id="charmname2" class="charm charmnow">
    <button class="btn" type="button" id="charmset">登録</button>
   </section><!-- 名前変換ここまで -->
 
@@ -64,7 +76,7 @@
   <li class="novellist__item">
   <img src="img/banner.PNG" alt="test" />
   <a href="novel1.html">あの日嘘つきだった僕たちへ</a>
-  <span class="novellist__text">崩壊スターレイル｜ファイノン｜作者-作者名</span>
+  <span class="novellist__text">崩壊スターレイル｜モーディス｜作者-作者名</span>
   <span class="novellist__text"><span class="novellist__tag">ハッピーエンド</span> <span class="novellist__tag">現パロ</span></span>
   </li>
   <li class="novellist__item">
@@ -76,7 +88,7 @@
   <li class="novellist__item">
   <img src="img/banner.PNG" alt="test" />
   <a href="novelpage.html">その額縁へ飾るのは君の瞳</a>
-  <span class="novellist__text">原神｜フリンズ｜作者-作者名</span>
+  <span class="novellist__text">ゼンレスゾーンゼロ｜ライカン｜作者-作者名</span>
   <span class="novellist__text"><span class="novellist__tag">甘め</span> <span class="novellist__tag">現在沿い</span></span>
   </li>
   <li class="novellist__item">
@@ -88,7 +100,7 @@
   <li class="novellist__item">
   <img src="img/banner.PNG" alt="test" />
   <a href="novelpage.html">ベッドに広がる小宇宙</a>
-  <span class="novellist__text">ゼンレスゾーンゼロ｜ライカン｜作者-作者名</span>
+  <span class="novellist__text">ゼンレスゾーンゼロ｜ヒューゴ｜作者-作者名</span>
   <span class="novellist__text"><span class="novellist__tag">甘め</span></span>
   </li>
   <li class="novellist__item">
@@ -110,7 +122,7 @@
 
   <!-- 執筆者 -->
   <section id="about">
-   <h2 class="headingL"><a id="writer">Writer（順不同・敬称略）</a></h2>
+   <h2 class="headingL">Writer（順不同・敬称略）</h2>
    <p><a href="writer.html">こちら</a>よりどうぞ</p>
    </section>
   </section>
@@ -123,7 +135,7 @@
    <section>
     <ul class="linklist flex">
      <li class="linklist__item"><a href="https://lanama.net/">lanama</a></li>
-     <li class="linklist__item"><a href="hhttps://hiro-design.net/utsusemi/">空蝉デザイン</a></li>
+     <li class="linklist__item"><a href="https://hiro-design.net/utsusemi/">空蝉デザイン</a></li>
     </ul>
    </section>
   </section>
@@ -148,7 +160,7 @@
 
  <!--JavaScrip 読込-->
  <script src="js/common.js" type="text/javascript"></script>
- <script src="js/novel.js"></script>
+ <!-- 名前変換スクリプト読み込み -->
  <script src="js/charm.js"></script>
 </body>
 
