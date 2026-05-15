@@ -1,0 +1,299 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap");
+
+/*－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+
+全ページ共通
+
+－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－*/
+
+@media screen and (max-width: 415px) {
+  body {
+    font-size: 1.0rem;
+  }
+}
+
+*:hover {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+/*－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+文字
+－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－*/
+p {
+  margin: 20px 0;
+  padding-right: 0;
+  text-align: justify;
+  letter-spacing: 1px;
+}
+
+a {
+  color: #000;
+}
+
+.button {
+  display: inline-block;
+  background: #eee;
+  border: 1px solid #000;
+  padding: 4px 8px;
+  text-align: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* 装飾 */
+.box {
+  border: solid 1px #000;
+  background: #eee;
+  padding: 20px;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+/*－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+
+横幅、ページ設定 
+
+－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－*/
+main {
+  min-height: calc(100vh - 65px);
+}
+
+main,
+footer {
+ position: relative;
+  width: 800px;
+  margin: 0 auto;
+  padding: 80px;
+  background: #fff;
+}
+
+main section,
+footer section {
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+@media screen and (max-width: 1099px) {
+  main,
+  footer {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  main,
+  footer {
+    padding: 40px 10px;
+  }
+}
+
+/*－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+
+小説個別ページ
+
+－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－*/
+.story section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.story section h1 {
+  font-size: 3rem;
+  margin-bottom: 100px;
+}
+
+@media screen and (max-width: 520px) {
+  .story section h1 {
+    margin-bottom: 40px;
+  }
+}
+
+.story section .after {
+  margin: 80px;
+}
+
+@media screen and (max-width: 520px) {
+  .story section .after {
+    margin: 40px;
+  }
+}
+
+.story.horizontal section {
+  writing-mode: horizontal-tb;
+  -webkit-writing-mode: horizontal-tb;
+  -ms-writing-mode: horizontal-tb;
+}
+
+/* 縦書きの場合 */
+.story.vertical {
+  padding: 40px 40px 0;
+
+}
+
+@media screen and (max-width: 520px) {
+  .story.vertical {
+    padding: 40px 20px 0;
+  }
+}
+
+.story.vertical section {
+  padding-bottom: 40px;
+  max-width: none;
+  height: calc(100vh - 105px);
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  overflow-x: auto;
+}
+
+@media screen and (max-width: 960px) {
+  .story.vertical section {
+    padding-bottom: 20px;
+    height: calc(90vh - 105px);
+  }
+}
+
+.story.vertical section h1 {
+  margin-left: 40px;
+}
+
+.story.vertical section p {
+  margin: 0 40px;
+}
+
+.story.vertical section .after {
+  margin: 80px 80px 20px 20px;
+}
+
+/*－－－－－－－－－－ ページ送りメニューボタン －－－－－－－－－－*/
+.pagebtn {
+  position: fixed;
+  right: 40px;
+  bottom: 20px;
+  z-index: 99;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 960px) {
+  .pagebtn {
+    right: 20px;
+    background: #fff;
+  }
+}
+
+.pagebtn .close {
+  position: absolute;
+  display: none;
+  top: -2px;
+  left: -10px;
+  padding: 2px;
+  font-weight: bold;
+}
+
+.pagebtn.is-active {
+  transform: translateY(-68px);
+  -webkit-transform: translateY(-68px);
+  -moz-transform: translateY(-68px);
+  -ms-transform: translateY(-68px);
+  -o-transform: translateY(-68px);
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -moz-transition: 0.2s;
+}
+
+.pagebtn.is-active svg {
+  opacity: 0.2;
+}
+
+.pagebtn.is-active .close {
+  display: block;
+}
+
+/*－－－－－－－－－－ ページ送りメニュー －－－－－－－－－－*/
+.pageTurn {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  padding: 10px;
+  padding-right: 14px;
+  transform: translateY(calc(100% + 86px));
+  -webkit-transform: translateY(calc(100% + 86px));
+  -moz-transform: translateY(calc(100% + 86px));
+  -ms-transform: translateY(calc(100% + 86px));
+  -o-transform: translateY(calc(100% + 86px));
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -moz-transition: 0.2s;
+  z-index: 99;
+}
+
+.pageTurn.is-active {
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -moz-transition: 0.2s;
+}
+
+.pageTurn div {
+  position: absolute;
+  top: -34px;
+  left: 0px;
+  width: 162px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+
+.pageTurn div .yoko,
+.pageTurn div .tate {
+  padding: 4px 8px;
+}
+
+.pageTurn span {
+  padding: 4px;
+}
+
+.pageTurn span a {
+  fill: #fff;
+}
+
+.pageTurn span a:hover {
+  opacity: 0.6;
+}
+
+
+/*－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+
+フッター
+
+－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－*/
+footer {
+  text-align: center;
+  padding: 20px;
+}

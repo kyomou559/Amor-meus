@@ -1,0 +1,280 @@
+/*－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+  
+  ＩＮＤＥＸ
+  
+  －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－*/
+
+
+.fv {
+ margin-top: 100px;
+ padding: 10px 20px;
+ text-align: center;
+}
+
+/*－－－－－－－－－－  更新履歴 －－－－－－－－－－*/
+.update__wrap {
+ margin: 40px 20px;
+
+ .headingM {
+  margin-bottom: 10px;
+ }
+}
+
+.update {
+ height: 140px;
+ overflow-y: auto;
+ padding-right: 20px;
+
+ .update__item {
+  display: flex;
+  gap: 0px 20px;
+  padding: 10px 0;
+ }
+
+ .update__item:not(:last-child) {
+  border-bottom: 1px solid var(--color-sub);
+ }
+}
+
+
+/* スマホ */
+@media screen and (max-width: 520px) {
+ .update__item {
+  flex-direction: column;
+  gap: 4px;
+ }
+}
+
+
+/*－－－－－－－－－－ TOPIC －－－－－－－－－－*/
+.topiclist__item {
+ gap: 0 20px;
+ margin-bottom: 10px;
+}
+
+
+/*－－－－－－－－－－ Profile －－－－－－－－－－*/
+.profile__img {
+ padding: 0 40px;
+}
+
+.profile__img img {
+ border-radius: 50%;
+ margin: auto;
+}
+
+
+
+/*－－－－－－－－－－  小説一覧ページ －－－－－－－－－－*/
+.novellist {
+ margin-top: 20px;
+}
+
+.novellist__item {
+ margin-bottom: 40px;
+}
+
+.novellist__item .grid {
+ grid-template-columns: repeat(auto-fill, minmax(20px, 1fr));
+ gap: 20px;
+}
+
+/* 2列表示 */
+.novellist.--2column {
+ display: glid;
+ grid-template-columns: 1fr 1fr;
+ gap: 20px;
+}
+
+.novellist.--2column .novellist__item {
+ margin: 0;
+}
+
+.novellist.--2column> :last-child {
+ margin-bottom: 0;
+}
+
+.novellist.--2column .novellist__text {
+ margin-left: 0px;
+}
+
+/* 小説のタグ */
+
+.novellist__tag {
+ background-color: #aaa;
+ color: #fff;
+}
+
+
+/* 小説のタイトル */
+.novellist__title {
+ /* font-size: 1.6rem; */
+}
+
+@media screen and (min-width: 1025px),
+print {
+ .novellist__title {
+  /* font-size: 1.8rem; */
+ }
+}
+
+.short .novellist__title {
+ /* font-size: 1.6rem; */
+}
+
+/* 数字プラス小タイトルの数字の色 */
+.novellist__number {
+ color: #aaa;
+ margin-right: 10px;
+}
+
+/* 短かめの説明文 */
+.novellist__text {
+ display: block;
+ font-size: 0.8em;
+ margin: 10px;
+ margin-left: 20px;
+}
+
+
+/* パターン１ ２列表示 */
+.charalist {
+ grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 1024px) {
+ .charalist {
+  grid-template-columns: 1fr;
+ }
+ 
+ .novellist.--2column {
+  display: glid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+}
+
+/* パターン２ １列表示*/
+.charalist--l {
+ grid-template-columns: 1fr;
+ gap: 40px;
+}
+
+/* パターン1、2共通 */
+.charalist__item {
+ position: relative;
+ align-items: flex-start;
+ height: 100%;
+}
+
+.charalist__item .charalist__img {
+ width: 40%;
+ height: 100%;
+ max-height: 40vh;
+ -o-object-fit: cover;
+ object-fit: cover;
+ -o-object-position: center top;
+ object-position: center top;
+}
+
+.charalist__item .charalist__body {
+ width: calc(60% - 20px);
+}
+
+.charalist__item .charalist__body> :first-child {
+ margin-top: 0;
+}
+
+.charalist__item .charalist__body .charalist__name {
+ font-size: larger;
+}
+
+.charalist--l .charalist__item .charalist__img {
+ max-height: 80vh;
+}
+
+/* スマホ */
+@media screen and (max-width: 768px) {
+ .charalist__item.flex {
+  display: block;
+ }
+
+ .charalist__item.flex .charalist__img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  -o-object-fit: contain;
+  object-fit: contain;
+ }
+
+ .charalist__item.flex .charalist__img img {
+  width: 100%;
+  height: auto;
+ }
+
+ .charalist__item.flex .charalist__body {
+  width: 100%;
+ }
+}
+
+
+/*－－－－－－－－－－ 連載一覧 －－－－－－－－－－*/
+.cardlist a {
+ text-decoration: none;
+}
+
+@media screen and (max-width: 520px) {
+ .cardlist {
+  gap: 10px;
+ }
+}
+
+.cardlist .cardlist__item {
+ width: calc((100% - 60px) / 4);
+}
+
+.cardlist .cardlist__item a .cardlist__img {
+ height: 200px;
+ -o-object-fit: cover;
+ object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+ .cardlist .cardlist__item {
+  width: calc((100% - 40px) / 3);
+ }
+}
+
+@media screen and (max-width: 520px) {
+ .cardlist .cardlist__item {
+  width: calc((100% - 10px) / 2);
+
+  a {
+   .cardlist__img {
+    height: 140px;
+   }
+  }
+ }
+}
+
+/*－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+
+OFFLINE
+
+－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－*/
+.off-list {
+ gap: 60px;
+ margin-bottom: 80px;
+}
+
+.storelist {
+ gap: 10px;
+ margin: 20px 0;
+}
+
+/* タブレット */
+@media screen and (min-width:769px) and (max-width: 1024px) {
+ .off-list {
+  gap: 20px;
+ }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>名前登録</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="charm.css">
+</head>
+<body>
+  <div class="name-container">
+    <h1>名前登録（手動保存版）</h1>
+    <div class="notice">
+      お使いのブラウザにお名前を保存します。
+    </div>
+    <div class="form-group">
+      <label for="charmname1">苗字</label>
+      <input type="text" id="charmname1" class="charm" placeholder="苗字">
+    </div>
+    <div class="form-group">
+      <label for="charmname2">みょうじ</label>
+      <input type="text" id="charmname2" class="charm" placeholder="みょうじ">
+    </div>
+    <div class="form-group">
+      <label for="charmname3">名前</label>
+      <input type="text" id="charmname3" class="charm" placeholder="名前">
+    </div>
+    <div class="form-group">
+      <label for="charmname4">なまえ</label>
+      <input type="text" id="charmname4" class="charm" placeholder="なまえ">
+    </div>
+    <div class="name-display">
+      <div class="kana">
+        <span class="charmname2">みょうじ</span>
+        <span class="charmname4">なまえ</span>
+      </div>
+      <span class="charmname1">苗字</span>
+      <span class="charmname3">名前</span>
+      <div id="charmsessionmsg"></div>
+    </div>
+    <!-- localstorage保存。ブラウザを閉じても遺す -->
+    <button type="button" id="charmset">登録</button>
+    <!-- sessionstorage保存。ブラウザを閉じると自動削除 -->
+    <button type="button" id="charmsession">一時登録</button>
+    <button type="button" id="charmunset">削除</button>
+    <div class="links">
+      <a href="sample.html">サンプル小説を読む</a>
+    </div>
+  </div>
+  <footer class="footer">
+    <!-- 配布サイトリンク -->
+    <a href="https://lanama.net/scripts/charm/" target="_blank">Powered by Charm.js</a>
+  </footer>
+  <!-- 名前変換スクリプト読み込み -->
+  <script src="charm.js"></script>
+</body>
+</html>

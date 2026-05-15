@@ -1,0 +1,234 @@
+/* フォントサイズの変数定義 */
+:root {
+  --font-size-h1: 18px;
+  --font-size-notice: 12px;
+  --font-size-label: 14px;
+  --font-size-input: 14px;
+  --font-size-display: 15px;
+  --font-size-kana: 11.5px;
+  --font-size-button: 14px;
+  --font-size-content: 14px;
+  --font-size-author: 14px;
+  --font-size-links: 14px;
+  --font-size-footer: 10px;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* 全体共通スタイル */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100svh;
+  background: #ffffff;
+  color: #666;
+  box-sizing: border-box;
+}
+
+/* 小説ページ用コンテナ */
+/* 名前登録ページ専用コンテナ */
+.container,
+.name-container {
+  background: #ffffff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  width: 90%;
+  padding: 40px;
+  text-align: center;
+  margin: 15px auto;
+}
+
+.container {
+  max-width: 600px;
+}
+
+/* 名前登録ページ専用コンテナ */
+.name-container {
+  max-width: 400px;
+}
+
+/* ヘッダー */
+h1 {
+  margin-bottom: 20px;
+  font-size: var(--font-size-h1);
+  color: #444;
+  font-weight: 300;
+  text-align: center;
+}
+
+/* 通知文 */
+.notice {
+  font-size: var(--font-size-notice);
+  color: #999;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* 名前登録ページ専用スタイル */
+.form-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-weight: 300;
+  color: #555;
+  font-size: var(--font-size-label);
+  margin-right: 10px;
+  width: 70px;
+  text-align: right;
+}
+
+/* 入力欄とプルダウンのスタイル統一 */
+.form-group input[type="text"],
+.form-group select {
+  width: 140px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: var(--font-size-input);
+  color: #555;
+  background-color: #f4f4f4;
+  box-sizing: border-box;
+}
+
+.form-group input[type="text"]:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #aaa;
+}
+
+.form-group input[type="text"]::placeholder {
+  color: #aaa;
+}
+
+/* 表示部分 */
+.name-display {
+  margin: 20px 0;
+  font-size: var(--font-size-display);
+  color: #444;
+  font-weight: 300;
+}
+
+.name-display .kana {
+  font-size: var(--font-size-kana);
+}
+
+/* ボタンスタイル */
+button {
+  background: #aaa;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: var(--font-size-button);
+  transition: background 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #bbb;
+}
+
+/* 小説ページ専用スタイル */
+.content {
+  font-size: var(--font-size-content);
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.author-info {
+  font-size: var(--font-size-author);
+  color: #777;
+  margin-top: 20px;
+  text-align: right;
+}
+
+/* 共通リンクスタイル */
+.links {
+  margin-top: 40px;
+  font-size: var(--font-size-links);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.links a {
+  color: #555;
+  transition: text-decoration 0.3s ease;
+  text-decoration: underline #ccc;
+  padding: 5px 10px;
+  width: auto;
+  text-align: center;
+}
+
+.links a:last-child {
+  margin-bottom: 0;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.links a.active {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* フッタースタイル */
+.footer {
+  font-size: var(--font-size-footer);
+  color: #999;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer a {
+  color: #777;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* iPad縦向き以下（最大幅768px）の場合のスタイル */
+@media (max-width: 768px) {
+  :root {
+    --font-size-h1: 17px;
+    --font-size-notice: 9px;
+    --font-size-label: 13px;
+    --font-size-input: 13px;
+    --font-size-display: 13px;
+    --font-size-kana: 9.5px;
+    --font-size-button: 13px;
+    --font-size-content: 13px;
+    --font-size-author: 13px;
+    --font-size-links: 13px;
+    --font-size-footer: 10px;
+  }
+
+  body {
+    min-height: auto;
+  }
+
+  .container, .name-container {
+    border: none;
+    box-shadow: none;
+    padding: 15px;
+  }
+}
