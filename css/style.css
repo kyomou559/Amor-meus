@@ -74,7 +74,7 @@ footer {
  position: relative;
   width: 800px;
   margin: 0 auto;
-  padding: 80px;
+  padding: 40px 80px;
   background: #fff;
 }
 
@@ -137,8 +137,7 @@ footer section {
 
 /* 縦書きの場合 */
 .story.vertical {
-  padding: 40px 40px 0;
-
+  width: 100%;
 }
 
 @media screen and (max-width: 520px) {
