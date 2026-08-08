@@ -1,0 +1,4 @@
+# TAFtoolsによって生成された Robots.txt
+User-agent: *
+Disallow: /
+Disallow: /cgi-bin/
